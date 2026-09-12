@@ -1,30 +1,80 @@
-# Magic Portfolio
+# Avnee Malu Portfolio
 
-A modern, responsive portfolio website designed to showcase professional work, projects, and personal insights. Built with a focus on clean design and seamless user experience, this platform serves as a comprehensive digital presence for creative professionals and developers.
+A modern portfolio website built with Next.js and Once UI, designed to present professional experience, projects, and personal brand in a clean, polished format.
+
+## Overview
+
+This portfolio is tailored for a finance and risk management professional, showcasing:
+
+- personal background and introduction
+- work experience and education
+- project highlights and case studies
+- blog-style writing
+- gallery and media assets
+- responsive, modern UI with light/dark theme support
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- App Router
+- Once UI
+- Biome for linting and formatting
 
 ## Features
 
-- **About Section**: Personal introduction, work experience, education, and technical skills
-- **Work Portfolio**: Showcase of projects with detailed case studies and media galleries
-- **Blog**: Share thoughts, tutorials, and industry insights through markdown-based content
-- **Gallery**: Visual showcase of creative work and media assets
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **SEO Optimized**: Built-in meta tags and structured data for better search visibility
-- **Theme Support**: Light and dark mode options for user preference
+- About page with bio, experience, education, and capability highlights
+- Work/project showcase with detailed entries
+- MDX-powered blog/work content
+- SEO metadata, sitemap, and robots configuration
+- Responsive layout for desktop and mobile
+- Theme configuration and custom styling
+- OG image generation and social metadata support
 
 ## Getting Started
 
-To view the portfolio, simply navigate to the deployed site or run the development server locally:
-
 1. Clone the repository
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open your browser to `http://localhost:3000`
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open the app in your browser:
+   ```text
+   http://localhost:3000
+   ```
+
+## Available Scripts
+
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+npm run lint:fix
+```
+
+## Project Structure
+
+```text
+src/
+  app/
+  components/
+  resources/
+  types/
+  utils/
+public/
+  images/
+```
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-*Crafted with care using Next.js and Once UI components.*
+Built with Next.js and Once UI for a clean, portfolio-focused online presence.
