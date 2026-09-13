@@ -1,0 +1,73 @@
+---
+title: "Corporate Credit Risk Model"
+publishedAt: "2026-09-14"
+summary: "An interactive Python and Streamlit credit-risk analytics application that estimates Probability of Default, financial health, key risk drivers, and stress-tested default risk."
+images: []
+link: "YOUR_STREAMLIT_APP_OR_GITHUB_URL"
+---
+
+## Overview
+
+Corporate Credit Risk Model is an interactive credit-risk analytics application built with Python and Streamlit. It uses published financial-ratio data to estimate a firm’s Probability of Default (PD), assign an illustrative risk category, calculate a transparent Financial Health Score, identify important model associations, and evaluate stress scenarios.
+
+The application uses the UCI Taiwanese Bankruptcy Prediction dataset, containing 6,819 firm observations and 95 published financial-ratio variables. The modelling workflow selects 12 financially meaningful variables across profitability, liquidity, leverage, coverage, and growth.
+
+> This project is designed for academic and portfolio purposes. It is not investment advice, a lending decision, or an official credit rating.
+
+## Analysis Included
+
+### Probability of Default and Risk Classification
+
+- Logistic Regression model producing a predicted Probability of Default
+- Illustrative risk categories: Low, Moderate, High, and Very High Risk
+- Historical-observation selection for individual firm-level analysis
+- Project-specific thresholds clearly distinguished from regulatory or banking standards
+
+### Financial Health Analysis
+
+The application evaluates financially relevant published ratios across:
+
+- Profitability: ROA, operating profit rate, and net income to assets
+- Liquidity: current ratio, quick ratio, and working capital to assets
+- Leverage: debt ratio and total debt to net worth
+- Coverage and cash generation: cash flow to assets and interest coverage
+- Growth and scale: asset growth and revenue per share
+
+### Model Evaluation
+
+The project compares an interpretable Logistic Regression model with a Random Forest classifier using a stratified held-out test set.
+
+- Logistic Regression: ROC-AUC of 0.935 and PR-AUC of 0.421
+- Random Forest: ROC-AUC of 0.938 and F1-score of 0.359
+- Evaluation includes precision, recall, F1-score, confusion matrix, ROC curve, and precision-recall curve
+- Class imbalance is addressed with class-weighted model training
+
+### Risk Driver Analysis
+
+For each selected observation, the dashboard ranks standardized Logistic Regression contributions to show which variables are associated with higher or lower predicted default risk.
+
+These outputs are presented as model associations rather than causal claims.
+
+### Stress Testing
+
+The application applies illustrative ratio-level stress scenarios:
+
+- Base Case: no change in revenue, profitability, or debt
+- Mild Stress: lower revenue and profitability with higher leverage
+- Severe Stress: larger declines in revenue and profitability with increased leverage
+
+Each scenario recalculates affected financial inputs, generates a stressed PD, measures the PD change, and compares the baseline and stressed risk categories.
+
+## Financial Health Score
+
+Corporate Credit Risk Model produces a transparent 0–100 Financial Health Score based on historical percentiles of profitability, liquidity, leverage, and cash-flow indicators.
+
+Higher profitability, liquidity, and cash generation improve the score, while higher leverage reduces it. The Financial Health Score is a companion diagnostic and does not replace the model-generated Probability of Default.
+
+## Decision Value
+
+A firm may appear profitable while carrying high leverage, weak liquidity, limited cash-flow capacity, or sensitivity to adverse operating conditions. This project combines default-risk modelling, financial-ratio diagnostics, explainability, and stress testing in one repeatable workflow to support structured corporate credit-risk analysis.
+
+## Tools
+
+Python · Streamlit · pandas · NumPy · scikit-learn · SciPy · Plotly · joblib · pytest · Credit Risk Modelling · Probability of Default · Stress Testing
