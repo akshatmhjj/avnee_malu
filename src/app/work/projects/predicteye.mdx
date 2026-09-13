@@ -1,31 +1,68 @@
 ---
 title: "AI Portfolio Doctor"
 publishedAt: "2026-01-20"
-summary: "A Python and Streamlit portfolio analytics application that helps investors understand performance, volatility, drawdown, momentum, and risk under changing market conditions."
+summary: "An interactive Python and Streamlit portfolio risk analytics terminal for evaluating performance, diversification, downside risk, technical indicators, and stress scenarios."
 images: []
-link: ""
+link: "https://portfolio-risk-doctor.streamlit.app/"
 ---
 
 ## Overview
 
-AI Portfolio Doctor is a portfolio analytics project built to make investment risk easier to read. It combines return analysis, risk measures, and technical indicators in one workflow so that portfolio behaviour can be reviewed before making an allocation decision.
+AI Portfolio Doctor is an interactive portfolio risk and analytics application built with Python and Streamlit. Users can enter holdings and portfolio weights to retrieve historical market data, evaluate portfolio behaviour, compare performance with a benchmark, and understand the sources of portfolio risk.
 
-## Analysis included
+Rather than relying on a black-box model, the application uses an interpretable, rules-based diagnostic engine. Each portfolio health insight is linked to calculated metrics, making the analysis transparent and easier to review.
 
-- Sharpe ratio to compare risk-adjusted performance.
-- Annualised volatility to show how widely returns move over time.
-- Maximum drawdown to highlight the depth of past portfolio declines.
-- Simple Moving Average and Relative Strength Index analysis to add a market-momentum view.
-- Portfolio stress testing to examine risk exposure and performance during adverse market conditions.
+> This project is designed for educational analysis and does not provide investment advice or trading recommendations.
 
-## Decision value
+## Analysis Included
 
-A portfolio can look strong on returns alone while carrying more volatility or downside risk than expected. This project brings the measures together in a simple, decision-oriented view, helping an investor ask better questions about diversification, risk tolerance, and allocation.
+### Performance and Risk-Adjusted Returns
 
-## Project impact
+- Total return and annualized return (CAGR)
+- Annualized volatility
+- Sharpe ratio and Sortino ratio
+- Maximum drawdown and drawdown history
+- Portfolio beta relative to a selected benchmark
 
-The workflow turns separate performance and risk measures into one repeatable review process. It helps compare portfolios on both upside participation and downside behaviour, making risk conversations more concrete before capital is allocated.
+### Downside Risk and Diversification
+
+- Historical Value at Risk (VaR)
+- Conditional Value at Risk (CVaR / Expected Shortfall)
+- Parametric VaR comparison
+- Correlation matrix and average portfolio correlation
+- Herfindahl-Hirschman Index (HHI) and effective holdings
+- Marginal and component contribution to portfolio risk by holding
+
+### Technical Analysis
+
+For each selected asset, the application calculates:
+
+- Simple Moving Averages (SMA 20, 50, and 200)
+- Relative Strength Index (RSI 14)
+- MACD and signal-line analysis
+- Bollinger Bands
+
+These indicators are presented as market-behaviour descriptors, not buy or sell signals.
+
+### Stress Testing
+
+The application evaluates portfolio exposure under adverse market scenarios, including:
+
+- Beta-adjusted market crash scenario
+- Severe market-stress scenario
+- Technology-sector selloff
+- Custom market-shock scenario
+
+Each scenario reports estimated portfolio return, profit and loss, ending value, and each holding’s contribution to the loss.
+
+## Portfolio Health Score
+
+AI Portfolio Doctor generates a transparent 0–100 Portfolio Health Score using volatility, drawdown, VaR, stress losses, concentration, and correlation. The score is accompanied by plain-language diagnostics such as concentration risk, elevated downside exposure, diversification strength, and market-beta sensitivity.
+
+## Decision Value
+
+A portfolio can produce attractive returns while still carrying concentrated exposure, elevated volatility, correlated holdings, or significant downside risk. This project brings performance, risk, diversification, and stress-test measures into a single repeatable workflow, helping users assess both upside participation and downside behaviour.
 
 ## Tools
 
-Python · Streamlit · Pandas · NumPy · Portfolio analytics · Risk analysis
+Python · Streamlit · pandas · NumPy · SciPy · Plotly · yfinance · pytest · Portfolio Analytics · Risk Analysis
